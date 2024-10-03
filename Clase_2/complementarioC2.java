@@ -1,4 +1,5 @@
 package Clase_2;
+
 import java.util.Scanner;
 
 public class complementarioC2 {
@@ -15,6 +16,5 @@ public class complementarioC2 {
         } else{
             System.out.println("Lo sentimos, debes ser mayor de edad para ingresar (tienes "+age+" años).");
         }
-        
     }
 }
