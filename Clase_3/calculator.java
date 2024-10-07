@@ -15,12 +15,11 @@ public class calculator {
             myScanner.nextLine();
             float result = 0;
             String opperation = "";
-
+            System.out.print("\033\143");
             boolean valid = false;
             while (!valid) {
                 valid = true;
-                System.out.print("\033\143");
-                System.out.println("Seleccione la operación que desearealizar:");
+                System.out.println("Seleccione la operación que deseas realizar:");
                 System.out.println("s. Suma, ");
                 System.out.println("r. Resta, ");
                 System.out.println("m. Multiplcación, ");
@@ -29,23 +28,32 @@ public class calculator {
             
                 switch (myScanner.nextLine().toUpperCase()) {
                     case "S":
+                        System.out.print("\033\143");
                         opperation = "sumar";
                         result = a+b;
                         break;
                     case "R":
+                        System.out.print("\033\143");
                         opperation = "restar";
                         result = a-b;
                         break;
                     case "M":
+                        System.out.print("\033\143");
                         opperation = "multiplicar";
                         result = a*b;
                         break;
                     case "D":
+                        System.out.print("\033\143");
                         opperation = "dividir";
-                        result = a/b;
+                        valid = b == 0 ? false:true;
+                        result = b == 0 ? 0:a/b;
+                        if (!valid) {
+                            System.out.println("El segundo número no puede ser 0.");
+                        }
                         break;
                     default:
-                        System.out.println("The character introduced does not correspond to a supported opperation");
+                        System.out.print("\033\143");
+                        System.out.println("El caracter ingresado no corresponde a una operación soportada.");
                         valid = false;
                         break;
                 }
