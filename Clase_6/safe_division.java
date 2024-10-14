@@ -4,14 +4,14 @@ import java.util.Scanner;
 public class safe_division {
     public static void main(String[] args) {
         String clear = "\033\143";
-        System.out.println(clear);
+        System.out.print(clear);
         Scanner tScan = new Scanner(System.in);
         System.out.print("Ingrese el primer número: ");
-        int n1 = tScan.nextInt();
+        float n1 = tScan.nextFloat();
         tScan.nextLine();
         System.out.print("Ingrese el segundo número: ");
-        int n2 = tScan.nextInt();
-        double result;
+        float n2 = tScan.nextFloat();
+        float result;
         try {
             result = n1/n2;
             System.out.println("El resultado es "+result);
