@@ -1,0 +1,6 @@
+{
+    "diffEditor.wordWrap": "on",
+    "[java]": {
+        "diffEditor.wordWrap": "on"
+    }
+}
