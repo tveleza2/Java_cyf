@@ -1,10 +1,6 @@
 package Clase_16;
 
-
 import java.util.Scanner;
-
-
-
 import java.util.Arrays;
 
 public class primePlus {
