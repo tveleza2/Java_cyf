@@ -78,8 +78,11 @@ public class calcMethods {
                     break;
                 case "D":
                     System.out.print("\033\143");
+                    // result = safeDivision(a, b);
+                    // valid = result!=Float.NaN;
+                    // if (!valid) {System.out.println("El denominador tiene que ser distinto de cero.");}
                     try {
-                        result = (float)a/(float)b;
+                        result = a/b;
                     } catch (ArithmeticException e) {
                         valid = false;
                         System.out.println("El denominador no puede ser cero.");
@@ -92,5 +95,14 @@ public class calcMethods {
         
         
         return result;
+    }
+
+
+    public static float safeDivision(int a, int b) {
+        try {
+            return a/b;
+        } catch (ArithmeticException e) {
+            return Float.POSITIVE_INFINITY;
+        }
     }
 }
