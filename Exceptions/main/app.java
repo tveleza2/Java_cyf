@@ -9,8 +9,8 @@ public class app {
 
     public static void main(String[] args) {
         System.out.print("\033\143");
-        mainBanco();
-        // mainSaludo();
+        // mainBanco();
+        mainSaludo();
     }
 
     public static void mainSaludo() {
@@ -19,10 +19,10 @@ public class app {
             SaludoServicio saludo = new SaludoServicio(sc);
             saludo.saludar();
         } catch (Exception e) {
-            System.out.println("El nombre no puede ser de menos de 3 letras.");
+            System.out.println(e.getMessage());
         }
-        
     }
+
     public static void mainBanco() {
         CuentaBancaria cuentita = new CuentaBancaria(10000f);
         System.out.printf("Saldo actual de la cuenta: %.2f.\n",cuentita.getSaldoInicial());
