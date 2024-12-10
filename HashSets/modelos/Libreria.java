@@ -15,9 +15,11 @@ public class Libreria {
         this.myHash.add(new Libro(aut,isbn,tit));
     }
     public void eliminarLibro(int isbn){
-        for (Libro libro : myHash) {
-            if(libro.getISBN()==isbn){
-                this.myHash.remove(libro);
+        java.util.Iterator<Libro> iterator = this.myHash.iterator();
+        while (iterator.hasNext()) {
+            Libro lib = iterator.next();
+            if(lib.getISBN()==isbn){
+                this.myHash.remove(lib);
                 break;
             }
         }
